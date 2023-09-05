@@ -1,25 +1,33 @@
-🐍 Wumpus World Solver 🌍
+# Wumpus World Solver :video_game:
 
-This project demonstrates a heuristic-based approach to solving the classic Wumpus World problem using Python. The Wumpus World is a grid-based environment where the player's goal is to navigate through the grid to find the gold while avoiding dangers such as pits and a deadly Wumpus creature.
+## Introduction :wave:
 
-🔍 Approach:
-The approach for solving the Wumpus World problem is based on a heuristic search algorithm, using a modified version of the A* algorithm. The use of a heuristic approach is suitable for this problem, as it efficiently navigates the environment using partial information to make informed decisions.
+This README provides an overview of the Wumpus World Solver code. The code implements a solver for the Wumpus World environment, a classic artificial intelligence problem. The solver uses a modified version of the A* algorithm to navigate the world, collect information, and ultimately find the optimal path to the goal. Let's dive into the details of the code! :mag:
 
-The approach involves iterative exploration of the environment while updating the probabilities of dangers (pits) and the Wumpus creature's presence in each cell. The `probe` and `cautious_probe` functions are used to gather information about the type of cell, intelligently collecting information about adjacent cells without risking the player's life.
+## Code Overview :computer:
 
-The probabilities are updated based on the obtained information, and decisions are made based on these probabilities. This reflects an intelligent approach to solving the Wumpus World problem, making use of heuristic search and probability techniques to make efficient decisions while minimizing risk.
+The code utilizes a modified version of the A* algorithm to explore and navigate the Wumpus World environment. Here's how it works:
 
-📊 Cost Calculation:
-The project also calculates the total cost of exploration and displays the average cost over multiple iterations. This provides a measure of performance and improvement of the algorithm, allowing for comparison and analysis of different strategies.
+1. The solver initializes the Wumpus World environment.
+2. The code defines a function `suiv` to calculate the adjacent cells of a given cell.
+3. The `convert` function is used to convert cell coordinates to matrix indices.
+4. The solver iterates through multiple iterations to explore and gather information in the environment.
+5. The solver maintains a dictionary `ma_dimension` to track the probabilities of hazards and wumpus presence in each cell.
+6. The solver calculates the type of each cell using the `probe` or `cautious_probe` functions from the Wumpus World environment.
+7. The solver updates the probabilities in `ma_dimension` based on the information obtained.
+8. The solver evaluates and iteratively updates the probabilities to make informed decisions.
+9. The solver calculates the total cost of exploration and displays the average cost over multiple iterations.
 
-🚀 Getting Started:
-To run the Wumpus World solver, make sure you have the required libraries and dependencies installed. Then, simply execute the Python script to see the solver in action!
+## How to Use :rocket:
 
-🔗 Dependencies:
-- `lib.wumpus2`: A library that simulates the Wumpus World environment.
+1. Import the necessary Wumpus World library.
+2. Run the code with the library to solve the Wumpus World environment.
+3. Observe the solver's progress and the average cost of exploration.
 
-💡 Note:
-- The solver's approach is written in Python and focuses on heuristic-based exploration and probabilistic decision-making.
-- The README is written in English to provide a clear understanding of the project's approach and details.
+## Additional Information :information_source:
 
-👏 Enjoy solving the Wumpus World problem using this heuristic-based approach and learn more about intelligent decision-making in uncertain environments!
+- The code includes comments for understanding each section's functionality. :memo:
+- Modify the solver's behavior by adjusting the exploration and decision-making strategies. :wrench:
+- The solver's performance can vary based on the Wumpus World environment's configuration. :game_die:
+
+Feel free to explore the code and experiment with different strategies to tackle the Wumpus World challenge! :video_game:
