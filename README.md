@@ -31,3 +31,11 @@ The code utilizes a modified version of the A* algorithm to explore and navigate
 - The solver's performance can vary based on the Wumpus World environment's configuration. :game_die:
 
 Feel free to explore the code and experiment with different strategies to tackle the Wumpus World challenge! :video_game:
+
+The approach for solving the Wumpus World problem appears to be based on a heuristic search approach using a modified version of the A* algorithm. The use of a heuristic approach is appropriate for solving this type of problem, as it allows for efficient navigation through the environment using partial information to make informed decisions.
+
+The approach involves iteratively exploring the environment while updating the probabilities of the presence of dangers (pits) and the Wumpus in each cell. The use of the `probe` and `cautious_probe` functions to gather information about the type of cell is a smart strategy to collect information about adjacent cells without risking the player's life.
+
+Updating probabilities based on obtained information and making decisions based on these probabilities reflects an intelligent approach to solving the Wumpus World problem. Additionally, calculating the total exploration cost and displaying the average cost over multiple iterations provides a performance measurement and improvement of the algorithm.
+
+In summary, the chosen approach appears to be well-suited for solving the Wumpus World problem using heuristic search and probability techniques to make efficient decisions while minimizing risk.
